@@ -5,6 +5,3 @@ __pycache__/
 
 # 真实案例运行记录（含项目细节，不入库）
 runs/
-
-# 含书稿原文的本地留底，作者确认公开后再取消忽略
-references/original-material.md

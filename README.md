@@ -48,3 +48,6 @@ python3 scripts/cost_model.py --in-tokens 3000 --out-tokens 500 --in-price 2 --o
 
 ## 范围
 不负责：行业入门、业务问题定义、评测执行、系统实施、法律合规结论。模型清单与价格不入库，只用带日期的快照模板记录。
+
+## 许可
+MIT，见 [LICENSE](LICENSE)。
