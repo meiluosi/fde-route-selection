@@ -1,0 +1,4 @@
+interface:
+  display_name: "FDE 技术路线与模型选型"
+  short_description: "先过滤合规与部署，再选适配路线，用客户样本比选模型的质量、成本与延迟"
+  default_prompt: "用 $fde-route-selection 看这个场景的选型，先找出会淘汰选项的硬约束缺口。"
