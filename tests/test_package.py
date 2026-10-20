@@ -49,6 +49,16 @@ class PackageTests(unittest.TestCase):
                 if l.startswith('|')]
         self.assertEqual(len(rows), 2, '索引在没有经 CONTRIBUTING 审核的记录前保持为空')
 
+    def test_eval_sheet_template_matches_documented_columns(self):
+        header = (R / 'templates/eval-sheet.csv').read_text(encoding='utf-8').splitlines()[0].split(',')
+        for col in ('分层', 'A正确', 'A引用对', 'A拒答对', 'A总秒', 'B正确', 'B总秒'):
+            self.assertIn(col, header)
+
+    def test_handoff_defines_ids_and_conclusion_words(self):
+        text = (R / 'references/handoff.md').read_text()
+        for key in ('route:C3', '`C#`', '`T#`', '`B#`', 'route:Proceed', 'fde-knowledge-base'):
+            self.assertIn(key, text)
+
     def test_contributing_requires_core_fields(self):
         text = (R / 'CONTRIBUTING.md').read_text()
         for key in ('可复现', '样本量', '版本', '利益关系', '客户数据'):
